@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style type="text/css">
+        .header {
+            width: 100%;
+            float: left;
+            height: 70px;
+            border-radius: 30px;
+            background: rgb(85, 59, 109);
+            padding: 2px;
+            margin-top: 10px;
+
+        }
+
+        .header ul li {
+
+            list-style: none;
+            display: inline-block;
+            padding: 10px;
+            /* float: right; */
+            background: white;
+            border-radius: 30px;
+            text-align: center;
+            margin-right: 10px;
+            margin-top: 10px;
+
+        }
+
+        ul {
+            text-align: right;
+            margin-right: 10px;
+            padding: auto;
+            font-size: medium;
+        }
+
+        .header ul li:hover {
+            cursor: pointer;
+            font-size: medium;
+            background: greenyellow;
+        }
+
+        .image {
+            color: white;
+            text-align: center;
+            border-radius: 30px;
+            height: 500px;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-image: url(https://wallpapercave.com/wp/wp5162474.jpg);
+            width: 100%;
+            float: left;
+            padding: auto;
+            margin-top: 10px;
+
+        }
+
+        .content {
+            margin-top: 190px;
+        }
+
+        .btn {
+            padding: 15px;
+            font-weight: 900;
+            color: rgb(247, 243, 243);
+            background: rgb(142, 4, 158);
+            border-color: rgb(23, 2, 43);
+            border-radius: 50px;
+
+        }
+
+        .btn:hover {
+            background: darkblue;
+            background-color: rgb(242, 240, 247);
+            color: black;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        .col-lg-6 img {
+            margin-top: 250px;
+            width: 100%;
+            float: left;
+        }
+
+        .col-lg-4 i {
+            background-color: rgb(8, 194, 107);
+            border-radius: 100%;
+            border: 5px solid rgb(247, 248, 247);
+            padding: 20px;
+            color: rgb(242, 244, 242);
+            margin-inline: 20px;
+        }
+
+        .services .box {
+            padding: 50px 20px;
+            margin-top: auto;
+            text-align: center;
+            border: 2px solid #e6e6e6;
+            height: 200px;
+            background: #fafafa;
+            box-shadow: 10px 10px grey;
+        }
+
+        .col-lg-4 i:hover {
+            cursor: pointer;
+            color: #16f70a;
+            border-color: rgb(6, 189, 52);
+            background-color: white;
+            border-radius: 40px;
+            transition: 0.2s;
+        }
+
+        .ctaimage {
+            color: white;
+            text-align: left;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-image: url(https://media.istockphoto.com/photos/purple-defocused-blurred-motion-abstract-background-picture-id1273929462?b=1&k=20&m=1273929462&s=170667a&w=0&h=Yldyj7IZlkZSFHf3kgp4T2OV2HAYNRX1Kw8W4RAqPlQ=);
+            width: 100%;
+            float: left;
+            height: 250px;
+            padding: auto;
+        }
+
+        .CTA {
+            margin-left: 1050px;
+            padding: auto;
+            font-weight: 900;
+            color: rgb(247, 243, 243);
+            background: rgb(142, 4, 158);
+            border-color: rgb(23, 2, 43);
+            border-radius: 20px;
+            margin-bottom: 50px;
+
+        }
+
+        .CTA:hover {
+            background: darkblue;
+            background-color: rgb(242, 240, 247);
+            color: black;
+            cursor: pointer;
+
+        }
+
+        .col-lg-4 img {
+            width: 100%;
+            float: left;
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 15px;
+            right: 0;
+            background-color: #008CBA;
+            overflow: hidden;
+            width: 92%;
+            height: 0;
+            transition: .5s ease;
+        }
+
+        .col-lg-4:hover .overlay {
+            height: 25%;
+        }
+
+        .col-lg-4 {
+            position: relative;
+            width: 50%;
+        }
+
+        .text {
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .images {
+            width: 100%;
+            height: auto;
+        }
+
+        .images2 {
+            width: 100%;
+            float: left;
+        }
+
+        .col-lg-6 i {
+            background-color: rgb(8, 194, 107);
+            border-radius: 100%;
+            border: 5px solid rgb(247, 248, 247);
+            padding: 20px;
+            color: rgb(242, 244, 242);
+            margin-inline: 20px;
+        }
+
+        .col-lg-6 i:hover {
+            cursor: pointer;
+            color: #16f70a;
+            border-color: rgb(6, 189, 52);
+            background-color: white;
+            border-radius: 40px;
+            transition: 0.2s;
+        }
+
+        i:hover {
+            cursor: pointer;
+            color: rgb(13, 225, 9);
+            border-color: rgb(251, 250, 253);
+            background-color: transparent;
+            border-radius: 40px;
+            transition: 0.2s;
+        }
+        button{
+            padding: 10px;
+            font-weight: 900;
+            color: rgb(225, 14, 193);
+            background: rgb(252, 248, 252);
+            border-color: rgb(23, 2, 43);
+            border-radius: 50%;
+        }
+        button:hover{
+            background: darkblue;
+            background-color: rgb(228, 8, 180);
+            color: rgb(248, 244, 244);
+            cursor: pointer;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harshiv</title>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<div class="header">
+    <ul>
+        <li>Home</li>
+        <li>Contact Us</li>
+        <li>About Us</li>
+        <li>Team</li>
+        <li>Services</li>
+        <li>Portfolio</li>
+    </ul>
+
+</div>
+<div class="image">
+    <div class="content">
+        <h1>
+            WELCOME TO REGNA
+        </h1>
+        <p style="font-size:large;">
+            We are team of talented designers making websites with Bootstrap</p>
+
+        <button class="btn">
+            get started
+
+        </button>
+    </div>
+</div>
+<div class="part">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h1 style="margin-top: 80px;">
+                    Few Words About Us
+                </h1>
+                <p style="margin-top: 30px;">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, earum.<br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, odit.<br>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit, quidem.<br>
+                </p>
+                <i class=" fa-2x fa-solid fa-briefcase"></i>
+                <h3 style="display: inline-block;">
+                    EIUSMOD TEMPOR
+                </h3>
+                <p style="margin-left: 120px;">
+                    Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est
+                    eligendi
+
+
+                </p>
+                <i class=" fa-2x fa-solid fa-rectangle-list"></i>
+                <h3 style="display: inline-block;">
+                    MAGNI DOLORES
+                </h3>
+                <p style="margin-left: 120px; align-items: justify-self;">
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+                    est laborum
+
+                </p>
+                <i class=" fa-2x fa-solid fa-binoculars"></i>
+                <h3 style="display: inline-block;">
+                    DOLOR SITEMA
+                </h3>
+                <p style="margin-left: 120px;">
+                    Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+                    tarad limino ata
+
+
+
+                </p>
+
+            </div>
+            <div class="col-lg-6">
+                <img src="https://bootstrapmade.com/demo/templates/Regna/assets/img/about-img.jpg" alt="Employee"
+                    width="100%">
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- facts part -->
+<div class="part1">
+    <div class="container">
+        <!-- <h1 style="font-size:50px; text-align:center;">
+            FACTS
+        </h1>
+        <p style="text-align: center;">
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+        </p> -->
+        <div class="row">
+            <div class="container aos-init aos-animate" data-aos="fade-up">
+                <div class="section-header">
+                    <h3 class="section-title" style="text-align:center;font-size: 50px; margin-top: 50px;;">FACTS</h3>
+                    <p class="section-description" style="text-align: center; font-size:15px; color: grey;">Sed ut
+                        perspiciatis unde
+                        omnis iste natus error sit voluptatem
+                        accusantium doloremque </p>
+                </div>
+                <div class="row counters" style=" font-size:50px;color:rgb(27, 235, 100 )">
+                    <div class="col-lg-3 col-6 text-center "> <span data-purecounter-start="0"
+                            data-purecounter-end="232" data-purecounter-duration="0" class="purecounter">232</span>
+                        <p style="color: black; font-size:large">Clients</p>
+                    </div>
+                    <div class="col-lg-3 col-6 text-center"> <span data-purecounter-start="0" data-purecounter-end="534"
+                            data-purecounter-duration="0" class="purecounter">534</span>
+                        <p style="color: black; font-size:large">Projects</p>
+                    </div>
+                    <div class="col-lg-3 col-6 text-center"> <span data-purecounter-start="0"
+                            data-purecounter-end="1463" data-purecounter-duration="0" class="purecounter">1463</span>
+                        <p style="color: black; font-size:large">Hours Of Support</p>
+                    </div>
+                    <div class="col-lg-3 col-6 text-center"> <span data-purecounter-start="0" data-purecounter-end="42"
+                            data-purecounter-duration="0" class="purecounter">42</span>
+                        <p style="color: black; font-size:large">Hard Workers</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+</div>
+<!-- services part -->
+<div class="services">
+    <h1 style="text-align: center; font-size:50px; margin-top: 50px;"> SERVICES</h1>
+    <p style="text-align: center; color: grey;">
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+    </p>
+    <div class="part2" style="margin-top: 30px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <i class=" fa-2x fa-solid fa-briefcase" style="margin-left:135px;"></i>
+                    <div class="box">
+                        <h3>
+                            Lorem, ipsum.
+                        </h3>
+                        <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati
+                            cupiditate non provident</p>
+                    </div>
+
+                </div>
+                <div class="col-lg-4">
+                    <i class=" fa-2x fa-solid fa-rectangle-list"style="margin-left:135px;"></i>
+                    <div class="box">
+                        <h3>
+                            Dolor Sitema
+                        </h3>
+                        <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+                    </div>
+
+                </div>
+                <div class="col-lg-4">
+                    <i class=" fa-2x fa-solid fa-binoculars"style="margin-left:135px;"></i>
+                    <div class="box">
+                        <h3>
+                            Sed Ut perspiciatis
+                        </h3>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="part3" style="margin-top: 30px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <i class=" fa-2x fa-solid fa-briefcase" style="margin-left:135px;"></i>
+                    <div class="box">
+                        <h3>
+                            Magni dolores
+
+                        </h3>
+                        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+                    </div>
+
+                </div>
+                <div class="col-lg-4">
+                    <i class=" fa-2x fa-solid fa-rectangle-list"style="margin-left:135px;"></i>
+                    <div class="box">
+                        <h3>
+                            Nemo Enim
+                        </h3>
+                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                    </div>
+
+                </div>
+                <div class="col-lg-4">
+                    <i class=" fa-2x fa-solid fa-binoculars"style="margin-left:135px;"></i>
+                    <div class="box">
+                        <h3>
+                             Eiusmod tempore
+                        </h3>
+                        <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- call to action -->
+<div class="cta" style="margin-top: 50px;">
+    <div class="ctaimage">
+        <div class="ctacontent">
+            <h1 style="margin: 50px;">
+                CALL TO ACTION
+            </h1>
+            <p style="margin: 50px;">
+                Lorem ipsum dolor sit amet.<br>
+                Lorem, ipsum dolor.<br>
+                <button class="CTA">
+                    CALL TO ACTION
+                </button>
+            </p>
+            <!-- <img src="https://media.istockphoto.com/photos/purple-defocused-blurred-motion-abstract-background-picture-id1273929462?b=1&k=20&m=1273929462&s=170667a&w=0&h=Yldyj7IZlkZSFHf3kgp4T2OV2HAYNRX1Kw8W4RAqPlQ=" alt="" width="700" height="200">
+    <button  class="CTA" >
+        CALL TO ACTION
+    </button>     -->
+        </div>
+    </div>
+
+</div>
+<!-- portfolio part -->
+<div class="part4">
+
+    <div class="container">
+        <div class="portfolio" style="margin-top: 350px;">
+            <h1 style="text-align: center;">
+                PORTFOLIO
+            </h1>
+            <p style="text-align: center;color:grey;">
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+            </p>
+        </div>
+        <div class="row">
+            <div class="col-lg-4" style="margin-top: 20px;">
+                <img src="https://bootstrapmade.com/demo/templates/Regna/assets/img/portfolio/portfolio-1.jpg" alt=""
+                    class="images">
+                <div class="overlay">
+                    <div class="text"> App 1</div>
+                </div>
+            </div>
+            <div class="col-lg-4" style="margin-top: 20px;">
+                <img src="https://bootstrapmade.com/demo/templates/Regna/assets/img/portfolio/portfolio-2.jpg" alt=""
+                    class="images">
+                <div class="overlay">
+                    <div class="text"> Web 3</div>
+                </div>
+            </div>
+            <div class="col-lg-4" style="margin-top: 20px;">
+                <img src="https://bootstrapmade.com/demo/templates/Regna/assets/img/portfolio/portfolio-3.jpg" alt=""
+                    class="images">
+                <div class="overlay">
+                    <div class="text"> App 2</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="part5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4" style="margin-top: 40px;">
+                <img src="https://bootstrapmade.com/demo/templates/Regna/assets/img/portfolio/portfolio-4.jpg" alt=""
+                    class="images">
+                <div class="overlay">
+                    <div class="text"> Card 2</div>
+                </div>
+            </div>
+            <div class="col-lg-4" style="margin-top: 40px;">
+                <img src="https://bootstrapmade.com/demo/templates/Regna/assets/img/portfolio/portfolio-5.jpg" alt=""
+                    class="images">
+                <div class="overlay">
+                    <div class="text"> App 2</div>
+                </div>
+            </div>
+            <div class="col-lg-4" style="margin-top: 40px;">
+                <img src="https://bootstrapmade.com/demo/templates/Regna/assets/img/portfolio/portfolio-6.jpg" alt=""
+                    class="images">
+                <div class="overlay">
+                    <div class="text"> Web 3</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="part6">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4" style="margin-top: 40px;">
+                <img src="https://bootstrapmade.com/demo/templates/Regna/assets/img/portfolio/portfolio-7.jpg" alt=""
+                    class="images">
+                <div class="overlay">
+                    <div class="text"> Card 1</div>
+                </div>
+            </div>
+            <div class="col-lg-4" style="margin-top: 40px;">
+                <img src="https://bootstrapmade.com/demo/templates/Regna/assets/img/portfolio/portfolio-8.jpg" alt=""
+                    class="images">
+                <div class="overlay">
+                    <div class="text"> Card 3</div>
+                </div>
+            </div>
+            <div class="col-lg-4" style="margin-top: 40px;">
+                <img src="https://bootstrapmade.com/demo/templates/Regna/assets/img/portfolio/portfolio-9.jpg" alt=""
+                    class="images">
+                <div class="overlay">
+                    <div class="text"> Web 3</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- team part -->
+<div class="part6" style="margin-top: 50px;">
+    <div class="team">
+        <h1 style="text-align:center;">
+            TEAMS
+        </h1>
+        <p style="text-align:center; color:grey;">
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+        </p>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <img src="https://bootstrapmade.com/demo/templates/Regna/assets/img/team-1.jpg" alt="" class="images2">
+                <h3 style="text-align: center;">
+                    Walter White
+                </h3>
+                <p style="text-align: center;">Chief Executive Officer</p>
+                <i class=" fa-x fa-brands fa-instagram" style="margin-left:90px;"></i>
+                <i class=" fa-x fa-brands fa-linkedin"></i>
+                <i class=" fa-x fa-brands fa-twitter"></i>
+                <i class=" fa-x fa-brands fa-facebook"></i>
+            </div>
+            <div class="col-lg-3">
+                <img src="https://bootstrapmade.com/demo/templates/Regna/assets/img/team-2.jpg" alt="" class="images2">
+                <h3 style="text-align: center;">
+                    Sarah Jhinson
+                </h3>
+                <p style="text-align: center;">Product Manager</p>
+                <i class=" fa-x fa-brands fa-instagram" style="margin-left:90px;"></i>
+                <i class=" fa-x fa-brands fa-linkedin"></i>
+                <i class=" fa-x fa-brands fa-twitter"></i>
+                <i class=" fa-x fa-brands fa-facebook"></i>
+            </div>
+            <div class="col-lg-3">
+                <img src="https://bootstrapmade.com/demo/templates/Regna/assets/img/team-3.jpg" alt="" class="images2">
+                <h3 style="text-align: center;">
+                    William Anderson
+                </h3>
+                <p style="text-align: center;">CTO</p>
+                <i class=" fa-x fa-brands fa-instagram" style="margin-left:90px;"></i>
+                <i class=" fa-x fa-brands fa-linkedin"></i>
+                <i class=" fa-x fa-brands fa-twitter"></i>
+                <i class=" fa-x fa-brands fa-facebook"></i>
+
+            </div>
+            <div class="col-lg-3">
+                <img src="https://bootstrapmade.com/demo/templates/Regna/assets/img/team-4.jpg" alt="" class="images2">
+                <h3 style="text-align: center;">
+                    Amanda Jepson
+                </h3>
+                <p style="text-align: center;">Accountant
+
+                </p>
+                <i class=" fa-x fa-brands fa-instagram" style="margin-left:90px;"></i>
+                <i class=" fa-x fa-brands fa-linkedin"></i>
+                <i class=" fa-x fa-brands fa-twitter"></i>
+                <i class=" fa-x fa-brands fa-facebook"></i>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<!-- contact part  -->
+<div class="contact">
+    <h1 style="text-align: center; margin-top:30px;">
+        CONTACT
+    </h1>
+    <p style="text-align:center;color: grey;">
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+    </p>
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.631550537846!2d72.5096835144041!3d23.03729682155985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e9b4922484c6f%3A0xe077cfffcd90ee87!2sSparks%20to%20Ideas!5e0!3m2!1sen!2sin!4v1652984695582!5m2!1sen!2sin"
+        width="800" height="600" style="border:0; width: 100%;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+</div>
+<div class="part7" style="margin-top: 40px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5">
+                <i class=" fa-2x fa-solid fa-location-dot"></i>
+                <p style="display: inline-block; margin:20px;">
+                    A108 Adam Street<br>
+                    New York, NY 535022
+                </p><br>
+                <i class=" fa-2x fa-solid fa-envelope"></i>
+                <p style="display: inline-block; margin:20px;">
+                    info@example.com
+                </p><br>
+                <i class=" fa-2x fa-solid fa-mobile"></i>
+                <p style="display: inline-block; margin:20px;">
+                    +1 5589 55488 55s
+                </p><br>
+
+                <i class=" fa-2x fa-brands fa-instagram" style="margin-left:20px; margin-top: 30px;"></i>
+                <i class=" fa-2x fa-brands fa-linkedin"></i>
+                <i class=" fa-2x fa-brands fa-twitter"></i>
+                <i class=" fa-2x fa-brands fa-facebook"></i>
+               
+            </div>
+            <div class="col-lg-7">
+                <form >
+                    <label for="fname"></label>
+                    <input type="text" id="fname" name="fname" value="Your name" style="margin-top: 20px; width: 300px;"><br>
+                    <label for="email"></label>
+                    <input type="text" id="email" name="email" value="Email"style="margin-top: 20px; width: 300px;"><br>
+                    <label for="subject"></label>
+                    <input type="text" id="subject" name="subject" value="Subject"style="margin-top: 20px; width: 300px;"><br>
+                    <label for="message"></label>
+                    <input type="text" id="message" name="message" value="Message" style="height:100px; margin-top: 20px; width: 300px;"><br>
+
+                </form>
+                <button class="button" style="margin: 40px;">
+                    Send Message
+                </button>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- footer part -->
+<div class="f"
+    style="width: 1520px; height:80px;background-color:rgb(58, 2, 53);margin-top: 40px; padding: auto;font-size: large; color: white; text-align: center;">
+    © Copyright Regna. All Rights Reserved<br>
+    Designed by Harshiv
+
+</div>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
